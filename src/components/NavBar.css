@@ -1,0 +1,99 @@
+/* Reset simple */
+.nav-container *, .nav-container *::before, .nav-container *::after {
+    box-sizing: border-box;
+}
+
+/* On cache l'input proprement */
+.hamburger-input {
+    position: absolute;
+    left: -100vw;
+}
+
+/* Style du bouton rond du hamburger */
+.hamburger-label {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    background: #fff;
+    border-radius: 9999px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Les barres du hamburger */
+.hamburger-label span {
+    background: #0F5075; /* Ton bleu */
+    width: 30px;
+    height: 4px;
+    position: relative;
+    transition: background 10ms 300ms;
+}
+
+.hamburger-label span::before, 
+.hamburger-label span::after {
+    position: absolute;
+    background: #0F5075;
+    width: inherit;
+    height: inherit;
+    content: "";
+    transition: top 300ms 350ms, transform 300ms 50ms;
+}
+
+.hamburger-label span::before { top: -10px; }
+.hamburger-label span::after { top: 10px; }
+
+/* État coché (Menu ouvert) */
+.hamburger-input:checked + .hamburger-label span {
+    background: transparent;
+}
+
+.hamburger-input:checked + .hamburger-label span::before,
+.hamburger-input:checked + .hamburger-label span::after {
+    top: 0;
+    transition: top 300ms 50ms, transform 300ms 350ms;
+}
+
+.hamburger-input:checked + .hamburger-label span::before { transform: rotate(45deg); }
+.hamburger-input:checked + .hamburger-label span::after { transform: rotate(-45deg); }
+
+/* MENU SLIDE-OUT */
+.nav-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: min(80%, 350px);
+    background: rgba(30, 41, 59, 0.95); /* Bleu foncé Afri avec transparence */
+    backdrop-filter: blur(10px);
+    transform: translateX(-100%);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    z-index: 90;
+    padding-top: 80px;
+}
+
+.hamburger-input:checked ~ .nav-menu {
+    transform: translateX(0);
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 2rem;
+}
+
+.nav-menu li { margin: 1.5rem 0; }
+
+.nav-menu a {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 500ms 300ms;
+}
+
+.hamburger-input:checked ~ .nav-menu a {
+    opacity: 1;
+}
