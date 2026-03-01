@@ -1,28 +1,21 @@
 import { Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar'; // Assure-toi que le chemin est correct
 import Home from './pages/Home'; // Importe ta page d'accueil (ou crée-la rapidement comme ci-dessous)
-// Importe tes pages ici (ou crée-les rapidement comme ci-dessous)
-// Idéalement, crée des fichiers séparés dans un dossier /pages
-// const Home = () => (
-//   <div className="p-10 text-center">
-//     <h1 className="text-4xl font-bold text-[#1e293b]">Welcome to Afri Educ Tech</h1>
-//     <p className="mt-4 text-gray-600">Innovation in education through 3D technology.</p>
-//   </div>
-// );
-
+import Contact from './pages/Contact'; // Importe ta page de contact (ou crée-la rapidement comme ci-dessous)
+import Footer from './components/Footer';
 const Schools = () => (
   <div className="p-10 text-center">
-    <h1 className="text-4xl font-bold text-[#73C2F0]">Our Partner Schools</h1>
+    <h1 className="text-4xl font-bold text-[#0F5075]">Our Partner Schools</h1>
     <p className="mt-4 text-gray-600">Discover the institutions that trust us.</p>
   </div>
 );
 
-const Contact = () => (
-  <div className="p-10 text-center">
-    <h1 className="text-4xl font-bold text-[#ba3a0f]">Contact Us</h1>
-    <p className="mt-4 text-gray-600">Ready to transform your school? Let's talk.</p>
-  </div>
-);
+// const Contact = () => (
+//   <div className="p-10 text-center">
+//     <h1 className="text-4xl font-bold text-[#ba3a0f]">Contact Us</h1>
+//     <p className="mt-4 text-gray-600">Ready to transform your school? Let's talk.</p>
+//   </div>
+// );
 
 function App() {
   return (
@@ -40,7 +33,7 @@ function App() {
           <Route path="*" element={<Home />} />
         </Routes>
       </main>
-
+      <Footer />
       {/* Tu pourras ajouter un Footer ici plus tard */}
     </div>
   );

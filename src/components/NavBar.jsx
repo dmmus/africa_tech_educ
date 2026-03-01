@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './NavBar.css'; // Assure-toi d'importer ton CSS
 import logo from '../assets/logo.png'; // Assure-toi que le chemin est correct
+
 const TricolorBorderUp = () => (
   <div className="flex h-[3px] w-full">
     <div className="flex-1 bg-[#0F5075]"></div>
@@ -49,7 +50,7 @@ const NavBar = () => {
             <li><Link to="/">Home</Link></li>
             <li><Link to="/schools">Our Schools</Link></li>
             <li><Link to="/tech">3D Technology</Link></li>
-            <li><Link to="/about">Contact Us</Link></li>
+            <li><Link to="/contact">Contact Us</Link></li>
           </ul>
         </nav>
       </header>

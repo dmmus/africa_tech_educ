@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import bgImage from '../assets/background_hero_page.png';
 import rightImage from '../assets/image_1.png';
 import Experience3D from '../components/Experience3D';
+import Contact from './Contact';
 
 
 const Home = () => {
@@ -74,6 +75,8 @@ const Home = () => {
             </div>
           </div>
       </section>
+
+      <Contact />
     </div>
   );
 };
