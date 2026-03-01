@@ -18,9 +18,9 @@
 ## 🎨 Visual Identity
 
 The project follows a specific color palette to reflect innovation and trust:
-* Primary Blue: `#73C2F0` (Vivid Azure)
-* Background: `#EAF6FA` (Soft Sky)
-* Action Orange: `#BA3A0F` (Burned Orange)
+* Primary Blue: `#0F5075` (Deep Ocean Blue)
+* Secondairy Red : `#BA3A0F` (Rust Red)
+* Action Orange: `#E3A045` (Golden Ochre)
 * Typography: **Outfit** (Modern Sans-Serif)
 
 ---
